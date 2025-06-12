@@ -1,11 +1,11 @@
 import { Link } from "react-router"
-import pic from "../../../public/images/fa-filimo-dark-logo.svg"
+import pic from "../../utils/images/fa-filimo-dark-logo.svg"
 import styles from "./styles.module.css"
 
 function Items() {
     return (
         <ul className={styles.items_wrapper}>
-            <li><Link to={"/"}><img src={pic} alt="main_img" /></Link></li>
+            <li className={styles.img_wrapper}><Link to={"/"}><img src={pic} alt="main_img" /></Link></li>
             <li><Link to={"/"}>تماشای آنلاین </Link></li>
             <li><Link to={"/"}>فیلم</Link></li>
             <li><Link to={"/"}>سریال</Link></li>

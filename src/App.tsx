@@ -1,7 +1,8 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { BrowserRouter, Route, Routes } from 'react-router'
-import { Home } from './pages'
+import Home from './pages/Home'
+
 
 function App() {
   const queryClient = new QueryClient()

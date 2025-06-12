@@ -4,7 +4,7 @@ import Buttons from './Buttons'
 
 function Header() {
   return (
-    <nav>
+    <nav className={`${styles.nav_wrapper} container`}>
         <Items/>
         <Buttons/>
     </nav>
