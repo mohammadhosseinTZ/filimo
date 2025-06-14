@@ -1,6 +1,8 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useMovies } from "../../hooks/useMovies"
 import SwiperBg from "./SwiperBg";
+import Filter from "../filter/Filter";
+import AllMovies from "../allMovies/AllMovies";
 export interface TMovies {
   id: string
   original_title: string
@@ -9,6 +11,7 @@ export interface TMovies {
   popularity: Number
   poster_path: string
   vote_average: number
+  release_date:string
 }
 export interface TCasts {
   id: string
@@ -24,6 +27,8 @@ function Hero() {
   return (
     <div>
       <SwiperBg movies={data} isPending={isPending} isFetching={isFetching} />
+      <Filter/>
+      <AllMovies/>
     </div>
   )
 }

@@ -9,16 +9,14 @@ import "swiper/css/navigation";
 import 'swiper/css';
 import { TMovies } from './Hero';
 import Items from "./Items";
+import Hero_Skelton from "./skelton/Hero_Skelton";
 
 function SwiperBg({ movies, isFetching, isPending }: { movies: TMovies[], isFetching: boolean, isPending: boolean }) {
-    console.log(movies);
 
     return (
         <div className={styles.swiper_hero_bg_wrapper}>
             {isFetching || isPending ?
-                <div className={`${styles.skelton_hero}  skeleton-wrapper `}>
-                    <div className={`${styles.skeleton_image} skeleton-image`}></div>
-                </div>
+                <Hero_Skelton />
                 :
                 <Swiper
                     modules={[Autoplay, Navigation, EffectFade]}

@@ -1,0 +1,53 @@
+.filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    gap: 20px;
+    padding: 15px;
+    background: hsla(0, 0%, 100%, .08);
+    backdrop-filter: blur(40px);
+    border-radius: 1.6rem;
+}
+.form_input:not(.form_search){
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #fff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 10px;
+}
+.form_input:not(.form_search) input:not(.range){
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    background-color: transparent;
+    max-width: 60px;
+}
+.form_input svg{
+    width: 16px;
+    fill: white;
+}
+.form_search input{
+    width: 300px;
+    padding: 13px;
+    font-size: 12px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.filters button{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 140px;
+}
