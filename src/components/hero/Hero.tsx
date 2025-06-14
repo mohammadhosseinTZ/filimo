@@ -1,3 +1,4 @@
+import { useQueryClient } from "@tanstack/react-query";
 import { useMovies } from "../../hooks/useMovies"
 import SwiperBg from "./SwiperBg";
 export interface TMovies {
@@ -18,11 +19,11 @@ export interface TCasts {
 }
 function Hero() {
   const { data, isPending, isFetching } = useMovies()
-
+  
 
   return (
     <div>
-      <SwiperBg movies={data}/>
+      <SwiperBg movies={data} isPending={isPending} isFetching={isFetching} />
     </div>
   )
 }
