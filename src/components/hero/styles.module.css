@@ -209,3 +209,7 @@
     top: 50%;
     z-index: -1;
 }
+@media screen and (max-width:992px) {
+    .items .item{
+        width: calc(100%/3 - 10px);}
+}

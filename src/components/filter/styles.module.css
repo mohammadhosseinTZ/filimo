@@ -51,3 +51,10 @@
     border-radius: 10px;
     width: 140px;
 }
+@media screen and (max-width:992px) {
+    .filters{
+        flex-direction: column;
+        border-radius: 0px;
+    }
+    
+}

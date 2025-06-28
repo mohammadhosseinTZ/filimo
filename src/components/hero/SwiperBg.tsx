@@ -33,7 +33,6 @@ function SwiperBg({ movies, isFetching, isPending }: { movies: TMovies[], isFetc
                     {movies && movies.map(el => (
                         <SwiperSlide key={el.id}>
                             <div className={styles.swiper_slide} style={{ backgroundImage: `url(${el.poster_path})` }}>
-                                {el.original_title}
                             </div>
                         </SwiperSlide>
                     ))}

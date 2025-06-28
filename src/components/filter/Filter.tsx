@@ -18,7 +18,6 @@ function Filter() {
             search
         }
         context.dispatch({type:"FILTER" , payload:ob})
-        console.log(context.state.filterData , "filter");
         
     }
     return (

@@ -35,7 +35,7 @@ const reducer = (state: StateType, action: ActionType): StateType => {
                         year !== "" && new Date(item.release_date).getFullYear() === Number(year) ;
 
                     const rating_filter =
-                        rating !== "" && item.vote_average === Number(rating) ;
+                        rating !== "" && item.vote_average >= Number(rating) ;
 
                     const search_filter =
                         search !== "" && item.original_title.toLowerCase().includes(search.toLowerCase()) ;
