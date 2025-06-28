@@ -16,6 +16,12 @@
 .movies_wrapper{
     margin-top: 30px;
 }
+.movies_wrapper button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
 .item img{
 
 }

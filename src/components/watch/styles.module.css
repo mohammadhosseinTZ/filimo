@@ -1,0 +1,118 @@
+.swiper_casts_container{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.swiper_slide img{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.swiper_slide h5{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.tabs{
+    display: flex;
+    border-bottom: 1px solid #a1a1a1;
+    margin-top: 30px;
+}
+.tabs button{
+    color:#a1a1a1;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+.tabs button.active{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.content >div:not(.active){
+    display: none;
+}
+.content >div.active{
+    display: block;
+}
+.info {
+    min-height: 350px;
+}
+.info .date{
+    font-size: 20px;
+    color: #fff !important;
+}
+.info .overview{
+    font-size: 16px;
+    text-align: end;
+    color: white;
+    line-height: 1.4;
+}
+.info .details{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.info .imdb{
+    font-size: 14px;
+    color: #ff9800;
+}
+
+.similar_movies{
+    min-height: 350px;
+}
+.similar_movies p{
+    font-size: 16px;
+    color: white;
+    margin: 20px 0px;
+}
+.similar_movies .btn_choose{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.similar_movies .btn_choose button{
+    color: #ff9800;
+    border: 1px solid #ff9800;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 38px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.gif{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.similar_items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.similar_items .similar_item{
+    width: calc(100%/5 - 10px);
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.similar_items .similar_item img{
+    width: 100%;
+}
+.similar_items .similar_item p{
+    margin: 5px 0px 0px 0px;
+    text-align: end;
+    color: white;
+}

@@ -11,6 +11,7 @@ import { TMovies } from './Hero';
 import Items from "./Items";
 import Hero_Skelton from "./skelton/Hero_Skelton";
 
+
 function SwiperBg({ movies, isFetching, isPending }: { movies: TMovies[], isFetching: boolean, isPending: boolean }) {
 
     return (

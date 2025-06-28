@@ -12,6 +12,7 @@ export interface TMovies {
   poster_path: string
   vote_average: number
   release_date:string
+  casts:TCasts[]
 }
 export interface TCasts {
   id: string

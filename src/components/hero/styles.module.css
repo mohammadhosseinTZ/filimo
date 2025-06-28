@@ -46,6 +46,13 @@
     box-sizing: border-box;
     visibility: hidden;
 }
+.items .item{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0px;
+}
 .items .details h5{
     color: white;
     margin: 0px;

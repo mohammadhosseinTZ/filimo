@@ -4,21 +4,25 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import Home from './pages/Home'
 import W from './pages/W'
 import Header from './components/header/Header'
+import InfiniteProvider from './context/InfiniteProvider'
+
 
 
 function App() {
   const queryClient = new QueryClient()
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-      <Header/>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/w/:id' element={<W/>} />
-        </Routes>
-      </BrowserRouter>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <InfiniteProvider>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/w/:id' element={<W />} />
+          </Routes>
+        </BrowserRouter>
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </InfiniteProvider>
   )
 }
 

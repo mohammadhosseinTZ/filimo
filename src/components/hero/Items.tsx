@@ -1,12 +1,16 @@
 import styles from "./styles.module.css"
 import { TMovies } from "./Hero"
-import { Link } from "react-router"
+import { Link, Navigate, useNavigate } from "react-router"
 import { useState } from "react"
 import Items_Sketon from "./skelton/Items_Sketon"
 
 export default function Items({ movies, isFetching, isPending }: { movies: TMovies[], isFetching: boolean, isPending: boolean }) {
+    const navigate = useNavigate()
     const [more, setMore] = useState<number>(10)
-
+    const handleClicked =((el:TMovies)=>{
+        localStorage.setItem("item" , JSON.stringify(el))
+        navigate(`/w/${el.original_title}`)
+    })
 
     return (
         <>
@@ -23,7 +27,7 @@ export default function Items({ movies, isFetching, isPending }: { movies: TMovi
                     </div>
                     <div className={styles.items}>
                         {movies.slice(0, more).map(el => (
-                            <Link to={`/w/${el.id}`} className={styles.item} key={el.id}>
+                            <button onClick={()=>handleClicked(el)} className={styles.item} key={el.id}>
                                 <div className={styles.img_wrapper}>
                                     <img src={el.poster_path} alt="" />
                                     <div className={styles.details}>
@@ -35,7 +39,7 @@ export default function Items({ movies, isFetching, isPending }: { movies: TMovi
                                         <p className={styles.overview}>{el.overview}</p>
                                     </div>
                                 </div>
-                            </Link>
+                            </button>
                         ))
                         }
                     </div>
